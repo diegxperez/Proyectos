@@ -1,0 +1,304 @@
+:root{
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafo: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafo);
+    font-size: 1rem;
+    line-height: 2;
+}
+
+/* Globales */
+.contenedor{
+    max-width: 75rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1.75rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* utilidades */
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+/* Header */
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
+
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 37.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 3.125rem;
+}
+
+@media (min-width:768px) {
+    .header__texto{
+        margin-top: 9.375rem;
+    }
+}
+
+.barra{
+    padding-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo{
+    color: var(--blanco);
+
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+
+.logo__bold{
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        gap: 1.25rem;
+    }
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2.5rem;
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 1.25rem;
+}
+
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: unset;
+}
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: .625rem 1.875rem;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    border: none;
+
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
+
+.boton--secundario{
+    background-color: var(--primario);
+}
+
+.cursos{
+    list-style: none;
+}
+
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 1.25rem;
+}
+
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: unset;
+}
+
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-curso__info {
+    font-weight: 400;
+}
+
+.widget-curso__label,
+.widget-curso__info{
+    font-size: 1.25rem;
+}
+
+.footer {
+    background-color: var(--negro);
+    padding-bottom: 1.875rem;
+    margin-top: 2.5rem;
+}
+
+/* Sobre nosotros */
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.25rem;
+    }
+}
+
+/* Cursos */
+
+.curso {
+    padding: 1.875rem;
+    border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1.25rem;
+    }
+}
+
+.curso:last-of-type{
+    border: unset;
+}
+
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.curso__info {
+    font-weight: 400;
+}
+
+.curso__label,
+.curso__info{
+    font-size: 1.25rem;
+}
+
+/* Contacto */
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 25rem;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -3.125rem auto 0 auto;
+    padding: 3.125rem;
+    width: 95%;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 1.25rem;
+    gap: 1.25rem;
+}
+
+.campo__label {
+    flex: 0 0 5.625rem;
+    text-align: right;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 200px;
+}
